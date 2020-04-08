@@ -1,0 +1,26 @@
+const readline = require('readline');
+
+const inp = readline.createInterface({
+  input: process.stdin
+});
+
+const userInput = [];
+
+inp.on("line", (Data) => {
+    var inputData = Data.split(" ");
+    var number =parseInt(inputData[0]);
+     var m=0;
+     var flag = 0;
+     m=number/2;
+     for(var i =2;i<=m;i++)
+     {
+         if(number%i===0)
+         {
+             console.log("Number is not prime");
+             flag=1;
+             break;
+         }
+     }
+     if(flag===0)
+     console.log("Number is prime");
+});
