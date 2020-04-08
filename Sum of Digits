@@ -1,0 +1,21 @@
+const readline = require('readline');
+
+const inp = readline.createInterface({
+  input: process.stdin
+});
+
+const userInput = [];
+
+inp.on("line", (Data) => {
+    var inputData = Data.split(" ");
+    var number =parseInt(inputData[0]);
+     var sum=0;
+     var m=0;
+     while(number>0)
+     {
+         m=parseInt(number%10);
+         sum=sum+m;
+         number=parseInt(number/10);
+     }
+     console.log(sum)
+});
